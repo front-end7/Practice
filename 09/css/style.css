@@ -7,7 +7,7 @@ body {
     outline: none !important;
 }
 .contact {
-    padding-top: 72px;
+    padding: 72px 0;
     text-align: center;
 }
 .contact__title {
@@ -42,7 +42,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-.btn:hover, .btn--submit {
+.btn:hover, .btn--submit, .btn:active {
     background-color: currentColor;
 }
 .btn:hover i, .btn--submit i {
@@ -88,4 +88,27 @@ body {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-right: none;
+}
+
+@media (max-width: 1024px) {
+    .btn {
+        padding-top: 100%;
+        position: relative;
+    }
+    .btn i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (max-width: 568px) {
+    .btn--submit {
+        padding-top: 0;
+    }
+}
+@media (hover: none) and (pointer: coarse) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
 }
