@@ -1,0 +1,29 @@
+@import 'variables';
+
+body {
+    /* background-image: url(../SEFolio\ PSD.jpg); */
+    background-position: top;
+    font-family: $font-primary;
+}
+* {
+    outline: none !important;
+}
+
+@import 'blocks/contact';
+@import 'blocks/btn';
+@import 'blocks/form';
+
+.green {
+    color: $color-green;
+}
+
+@media (max-width: 1024px) {
+}
+@media (max-width: 568px) {
+    
+}
+@media (hover: none) and (pointer: coarse) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+}

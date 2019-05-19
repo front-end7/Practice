@@ -1,0 +1,59 @@
+mixin btn(_class)
+    a.btn(href="javascript:void(0)", class=`btn--${_class}`)
+        i(class=`fa-${_class}`).fab
+
+-
+    var colors = [
+        "facebook-f",
+        "twitter",
+        "instagram",
+        "dribbble"
+    ]
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        <link href="https://fonts.googleapis.com/css?family=Asap:400,400i,700|Karla" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/bootstrap-grid.css">
+        <link rel="stylesheet" href="./css/style.css">
+    body.page
+        .page__contact.contact
+            .container
+                h1.contact__title Have any 
+                    strong.green project!
+                <h2 class="contact__subtitle">Just send me a message I will help you and make you smile</h2>
+                <div class="row contact__grid">
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="row">
+                            each colorName in colors
+                                .col-xl-6.col-lg-6.col-md-3.col-6
+                                    +btn(colorName)
+                        </div>
+                    </div>
+                    <form action="" class="col-xl-8 col-lg-8 col-md-12">
+                        <div class="row">
+                            - var value = ['Eftakher Ala']
+                            each placeholderText, index in ['First Name', 'Last Name', 'Your Email', 'Project Name']
+                                .col-xl-6.col-lg-6.col-md-6
+                                    .form__field
+                                        input.form__input(type="text", placeholder= placeholderText, value= value[index] ? value[index] : '')
+                            
+                            <div class="col-xl-12 col-lg-12">
+
+                                <div class="form__field d-flex">
+                                    <textarea placeholder="Your Message......." class="form__input form__input--texatrea"></textarea>
+                                    button.btn(type="submit").btn--submit
+                                        <i class="fas fa-paper-plane"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>

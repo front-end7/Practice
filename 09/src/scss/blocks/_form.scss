@@ -1,0 +1,25 @@
+.form {
+
+    &__field {
+        margin-bottom: 19px;
+    }
+    
+    &__input {
+        border: 1px solid #bababa;
+        border-radius: 5px;
+        width: 100%;
+        background-color: transparent;
+        padding: 15px 20px;
+
+        &--texatrea {
+            min-height: 161px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: none;
+        }
+
+        &:focus {
+            border-color: #2ec06c;
+        }
+    }
+}
